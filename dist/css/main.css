@@ -1,0 +1,97 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  height: 100%;
+  padding-top: 40vh;
+  overflow: hidden;
+  text-align: center;
+  background-image: url("../images/bg-image.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  background-position: left bottom;
+  position: relative;
+  z-index: 0;
+}
+.home::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: linear-gradient(to right, rgba(28, 103, 88, 0.6), rgba(28, 103, 88, 0.2));
+  z-index: -1;
+}
+.home_name {
+  font-size: 5rem;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  border-bottom: 2px solid #eef2e6;
+}
+.home_name-last {
+  color: #d6cda4;
+  font-weight: 800;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #1c6758;
+  color: #eef2e6;
+  font-family: "Raleway", sans-serif;
+  line-height: 1;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+}
+
+a {
+  color: #eef2e6;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 1rem;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+main .social-icons {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 9;
+}
+main .social-icons a {
+  font-size: 1.8rem;
+  margin: 0.4rem;
+  padding: 0.1rem;
+}
+main .social-icons a:hover {
+  color: red;
+}
+
+footer {
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0.4rem;
+  right: 1rem;
+  text-align: right;
+  padding: 1rem;
+  color: #eef2e6;
+}/*# sourceMappingURL=main.css.map */

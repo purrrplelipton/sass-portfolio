@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+$bg-color: #1c6758;
+$text-color: #eef2e6;
+$secondary-color: #d6cda4;
+$default-font: 'Raleway', sans-serif;
+$font-weights: (
+  'thin': 100,
+  'extra-light': 200,
+  'light': 300,
+  'regular': 400,
+  'medium': 500,
+  'semi-bold': 600,
+  'bold': 700,
+  'extra-bold': 800,
+  'black': 900,
+);
+
+@mixin transition-ease {
+  transition: all 0.35s ease-in-out;
+}
