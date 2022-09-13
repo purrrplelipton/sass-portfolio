@@ -2,24 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Cache-control" content="public">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/dist/favicon_io/apple-touch-icon.png"
+      href="./dist/favicon_io/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/dist/favicon_io/favicon-32x32.png"
+      href="./dist/favicon_io/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="/dist/favicon_io/favicon-16x16.png"
+      href="./dist/favicon_io/favicon-16x16.png"
     />
     <link rel="manifest" href="/dist/favicon_io/site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,7 +32,7 @@
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css"
     />
-    <link rel="stylesheet" href="/dist/css/main.css" />
+    <link rel="stylesheet" href="./dist/css/main.css" />
     <title>John Doe | FullStack Dev</title>
   </head>
   <body>
@@ -43,16 +43,30 @@
       <nav class="nav">
         <ul class="menu-nav">
           <li class="menu-nav_item active">
-            <a href="index.html" class="menu-nav_link">Home</a>
+            <a aria-label="menu" href="./index.html" class="menu-nav_link"
+              >Home</a
+            >
           </li>
           <li class="menu-nav_item">
-            <a href="about.html" class="menu-nav_link">About Me</a>
+            <a aria-label="about me" href="./about.html" class="menu-nav_link"
+              >About Me</a
+            >
           </li>
           <li class="menu-nav_item">
-            <a href="projects.html" class="menu-nav_link">My Projects</a>
+            <a
+              aria-label="my projects"
+              href="./projects.html"
+              class="menu-nav_link"
+              >My Projects</a
+            >
           </li>
           <li class="menu-nav_item">
-            <a href="contact.html" class="menu-nav_link">Contact Me</a>
+            <a
+              aria-label="contact me"
+              href="./contact.html"
+              class="menu-nav_link"
+              >Contact Me</a
+            >
           </li>
         </ul>
       </nav>
@@ -63,15 +77,23 @@
         <h1 class="home_name">John <span class="home_name-last">Doe</span></h1>
         <h2>Your Next App Developer</h2>
         <div class="social-icons">
-          <a href="#!"><i class="fi fi-brands-twitter"></i></a>
-          <a href="#!"><i class="fi fi-brands-facebook"></i></a>
-          <a href="#!"><i class="fi fi-brands-instagram"></i></a>
-          <a href="#!"><i class="fi fi-brands-github"></i></a>
+          <a aria-label="twitter" href="#!"
+            ><i class="fi fi-brands-twitter"></i
+          ></a>
+          <a aria-label="facebook" href="#!"
+            ><i class="fi fi-brands-facebook"></i
+          ></a>
+          <a aria-label="instagram" href="#!"
+            ><i class="fi fi-brands-instagram"></i
+          ></a>
+          <a aria-label="github" href="#!"
+            ><i class="fi fi-brands-github"></i
+          ></a>
         </div>
         <footer>Copyright<sup>&copy;</sup> 2022</footer>
       </section>
     </main>
 
-    <script type="text/javascript" src="/dist/js/main.js"></script>
+    <script type="text/javascript" src="./dist/js/main.js"></script>
   </body>
 </html>
