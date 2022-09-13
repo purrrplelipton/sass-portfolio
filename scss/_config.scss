@@ -8,6 +8,7 @@
 
 $bg-color: #1c6758;
 $text-color: #eef2e6;
+$dark-text-color: #483838;
 $secondary-color: #d6cda4;
 $default-font: 'Raleway', sans-serif;
 $font-weights: (
@@ -22,6 +23,14 @@ $font-weights: (
   'black': 900,
 );
 
-@mixin transition-ease {
-  transition: all 0.35s ease-in-out;
+@mixin transition-ease($time) {
+  transition: all $time ease-in-out;
+}
+
+@function set-text-color($color) {
+  @if(lightness($color) > 40%) {
+    @return $dark-text-color
+  } @else {
+    @return $text-color
+  }
 }

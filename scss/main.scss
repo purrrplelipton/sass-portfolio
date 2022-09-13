@@ -1,10 +1,10 @@
-@import './config', './home';
+@import './config', './home', './menu';
 
 body {
   width: 100vw;
   height: 100vh;
   background-color: $bg-color;
-  color: $text-color;
+  color: set-text-color($bg-color);
   font-family: $default-font;
   line-height: 1;
 }
@@ -16,7 +16,7 @@ h3 {
 }
 
 a {
-  color: $text-color;
+  color: set-text-color($bg-color);
   text-decoration: none;
 }
 
@@ -24,7 +24,7 @@ header {
   position: fixed;
   z-index: 2;
   width: 100%;
-  padding: 1rem;
+  padding: 0.75rem;
 }
 
 main {
@@ -33,17 +33,17 @@ main {
 
   .social-icons {
     position: fixed;
-    bottom: 1rem;
-    left: 1rem;
-    z-index: 9;
+    bottom: 0.75rem;
+    left: 0.75rem;
 
     a {
-      font-size: 1.8rem;
-      margin: 0.4rem;
-      padding: 0.1rem;
+      font-size: 1.75rem;
+      margin: 0.3rem;
+      padding: 0.2rem;
+      @include transition-ease(0.3s);
 
       &:hover {
-        color: red;
+        color: $secondary-color;
       }
     }
   }
@@ -52,9 +52,9 @@ main {
 footer {
   font-size: 1rem;
   position: fixed;
-  bottom: 0.4rem;
-  right: 1rem;
+  bottom: 0.25rem;
+  right: 0.75rem;
   text-align: right;
-  padding: 1rem;
-  color: $text-color;
+  padding: 0.7rem;
+  color: set-text-color($bg-color);
 }
