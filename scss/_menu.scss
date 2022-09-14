@@ -10,7 +10,7 @@
     cursor: pointer;
   }
 
-  @include transition-ease(0.35s);
+  @include transition-ease;
 
   &_burger {
     position: absolute;
@@ -20,7 +20,7 @@
     height: 2px;
     background-color: set-text-color($bg-color);
 
-    @include transition-ease(0.35s);
+    @include transition-ease;
 
     &::before {
       content: '';
@@ -30,7 +30,7 @@
       height: 100%;
       background-color: set-text-color($bg-color);
 
-      @include transition-ease(0.35s);
+      @include transition-ease;
     }
     &::after {
       content: '';
@@ -40,7 +40,7 @@
       height: 100%;
       background-color: set-text-color($bg-color);
 
-      @include transition-ease(0.35s);
+      @include transition-ease;
     }
 
     &.open {
@@ -66,7 +66,6 @@
   top: 0;
   left: 0;
   width: 100vw;
-  opacity: 0.98;
   visibility: hidden;
 
   &.open {
@@ -81,24 +80,26 @@
     height: 100vh;
     overflow: hidden;
     background-image: linear-gradient(
-      to right,
-      rgba($bg-color, .7) 40%,
-      transparent
+      45deg,
+      $bg-image-color 40%,
+      rgba($bg-image-color, 0.6)
     );
     list-style-type: none;
     padding-right: 1rem;
     transform: translateX(-100%);
 
-    @include transition-ease(0.35s);
+    @include transition-ease;
 
     &.open {
       transform: translateX(0);
     }
 
     &_item {
-      transform: translateY(-100vh);
+      width: 100%;
+      text-align: center;
+      transform: translateY(100vh);
 
-      @include transition-ease(0.4s);
+      @include transition-ease;
 
       &.open {
         transform: translateX(0);
@@ -108,5 +109,27 @@
         color: $secondary-color;
       }
     }
+
+    &_link {
+      width: 100%;
+      display: inline-block;
+      font-size: 2rem;
+      text-transform: uppercase;
+      padding: .5rem 0;
+      margin: 1.5rem 0;
+      font-weight: set-font-weight('light');
+
+      @include transition-ease;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+@for $i from 1 through 4 {
+  .menu-nav_item:nth-child(#{$i}) {
+    transition-delay: ($i * 0.1s) + 0.1s;
   }
 }

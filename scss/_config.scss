@@ -7,6 +7,7 @@
 }
 
 $bg-color: #1c6758;
+$bg-image-color: #226e5f;
 $text-color: #eef2e6;
 $dark-text-color: #483838;
 $secondary-color: #d6cda4;
@@ -23,14 +24,18 @@ $font-weights: (
   'black': 900,
 );
 
-@mixin transition-ease($time) {
-  transition: all $time ease-in-out;
+@mixin transition-ease {
+  transition: all 0.35s ease-in-out;
 }
 
 @function set-text-color($color) {
-  @if(lightness($color) > 40%) {
-    @return $dark-text-color
+  @if (lightness($color) > 40%) {
+    @return $dark-text-color;
   } @else {
-    @return $text-color
+    @return $text-color;
   }
+}
+
+@function set-font-weight($weight-name) {
+  @return map-get($map: $font-weights, $key: $weight-name);
 }
