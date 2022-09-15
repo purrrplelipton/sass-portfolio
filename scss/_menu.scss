@@ -50,12 +50,14 @@
       &::before {
         top: 0;
         transform: rotate(0deg) translate(-1px, 4px);
+        background-color: $secondary-color;
       }
 
       &::after {
         top: 0;
         width: 100% + 15%;
         transform: rotate(-90deg) translate(-4px, -1px);
+        background-color: $secondary-color;
       }
     }
   }
@@ -115,7 +117,7 @@
       display: inline-block;
       font-size: 2rem;
       text-transform: uppercase;
-      padding: .5rem 0;
+      padding: 0.5rem 0;
       margin: 1.5rem 0;
       font-weight: set-font-weight('light');
 
@@ -124,6 +126,20 @@
       &:hover {
         color: $secondary-color;
       }
+    }
+  }
+
+  span.attribution {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9px;
+    position: fixed;
+    bottom: 5px;
+    left: 5px;
+    
+    @include transition-ease;
+
+    a {
+      color: $secondary-color;
     }
   }
 }

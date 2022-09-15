@@ -23,7 +23,8 @@ $font-weights: (
   'extra-bold': 800,
   'black': 900,
 );
-$bg-image: 'https://drive.google.com/uc?export=download&id=1sJ_6kFSabqdFyq_fW6JB0rUX5EUnY_nu';
+$bg-image: '../images/bg-image.webp';
+$bg-image-desktop: '../images/bg-image-desktop.webp';
 
 @mixin transition-ease {
   transition: all 0.35s ease-in-out;
