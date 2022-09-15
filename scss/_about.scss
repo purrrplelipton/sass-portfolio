@@ -5,11 +5,11 @@
   &_bio-image {
     height: 50vh;
     width: 100%;
-    background-image: url('../images/bg-image.jpg');
+    background-image: url('../images/bg-image.webp');
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
-    background-position: right bottom;
+    background-position: center;
     position: relative;
     z-index: 0;
 
@@ -20,7 +20,7 @@
       height: 100%;
       top: 0;
       right: 0;
-      background: linear-gradient(0deg, $bg-color, rgba($bg-image-color, 0.25));
+      background: linear-gradient(0deg, $bg-color 25%, rgba($bg-image-color, 0.25));
       z-index: -1;
     }
 
@@ -30,6 +30,7 @@
     justify-content: flex-end;
 
     p {
+      font-size: 1.125rem;
       margin-bottom: 2rem;
     }
   }
@@ -39,6 +40,7 @@
     text-align: center;
 
     .text-secondary {
+      font-size: 2rem;
       padding-bottom: 0.5rem;
       margin-bottom: 0.5rem;
     }
@@ -60,10 +62,11 @@
 
       h2,
       h3 {
-        margin-top: 0.5rem, 0;
+        margin-top: 0.5rem;
       }
       h6 {
         margin: 0.3rem 0;
+        font-size: .9rem;
       }
     }
   }

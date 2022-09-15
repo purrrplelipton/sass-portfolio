@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="Cache-control" content="public">
+    <meta http-equiv="Cache-control" content="public" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="apple-touch-icon"
@@ -21,7 +21,7 @@
       sizes="16x16"
       href="./dist/favicon_io/favicon-16x16.png"
     />
-    <link rel="manifest" href="./dist/favicon_io/site.webmanifest" />
+    <link rel="manifest" href="/dist/favicon_io/site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -30,10 +30,14 @@
     />
     <link
       rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css"
     />
     <link rel="stylesheet" href="./dist/css/main.css" />
-    <title>John Doe | Back-End Developer</title>
+    <title>Reach Out To John</title>
   </head>
   <body>
     <header>
@@ -42,20 +46,20 @@
       </div>
       <nav class="nav">
         <ul class="menu-nav">
-          <li class="menu-nav_item active">
-            <a aria-label="menu" href="/index.html" class="menu-nav_link"
+          <li class="menu-nav_item">
+            <a aria-label="menu" href="./index.html" class="menu-nav_link"
               >Home</a
             >
           </li>
           <li class="menu-nav_item">
-            <a aria-label="about me" href="/about.html" class="menu-nav_link"
+            <a aria-label="about me" href="./about.html" class="menu-nav_link"
               >My Story</a
             >
           </li>
           <li class="menu-nav_item">
             <a
               aria-label="my projects"
-              href="/projects.html"
+              href="./projects.html"
               class="menu-nav_link"
               >My Works</a
             >
@@ -63,8 +67,8 @@
           <li class="menu-nav_item">
             <a
               aria-label="contact me"
-              href="/contact.html"
-              class="menu-nav_link"
+              href="./contact.html"
+              class="menu-nav_link active"
               >Reach Out</a
             >
           </li>
@@ -72,10 +76,26 @@
       </nav>
     </header>
     <main>
-      <section class="home">
-        <h2>Hello! I'm</h2>
-        <h1 class="home_name">John <span class="home_name-last">Doe</span></h1>
-        <h2 class="my-job">Back-End Developer</h2>
+      <section class="contact">
+        <h2 class="text-secondary">Contact Me</h2>
+        <div class="contact_list">
+          <div class="contact_email">
+            <i class="fi fi-rs-envelope"></i> Email
+            <div class="text-secondary">purrrplelipton@outlook.com</div>
+          </div>
+          <div class="contact_phone">
+            <i class="fi fi-rs-phone-call"></i> Phone
+            <div class="text-secondary">+234 (0)808 782 3890</div>
+          </div>
+          <div class="contact_address">
+            <i class="fi fi-rs-marker"></i> Address
+            <div class="text-secondary">
+              № 1, Emanis st, off Jamiu Opeoluwa st, Otitolere qtrs, Mowe, Ogun
+              State, Nigeria
+            </div>
+          </div>
+        </div>
+
         <div class="social-icons">
           <a aria-label="twitter" href="https://twitter.com/johndoe"
             ><i class="fi fi-brands-twitter"></i
@@ -83,7 +103,7 @@
           <a aria-label="facebook" href="https://facebook.com/johndoe"
             ><i class="fi fi-brands-facebook"></i
           ></a>
-          <a aria-label="instagram" href="https://instagram.com/johndoe"
+          <a aria-label="instagram" href="https://instagramcom/johndoe"
             ><i class="fi fi-brands-instagram"></i
           ></a>
           <a aria-label="github" href="https://github.com/purrrplelipton"

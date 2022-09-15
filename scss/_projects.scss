@@ -1,0 +1,126 @@
+.projects {
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+
+  &_bio-image {
+    height: 30vh;
+    width: 100%;
+    background-image: url('../images/bg-image.webp');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center top;
+    transform: scaleX(-1);
+    position: relative;
+    z-index: 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background: linear-gradient(0deg, $bg-color, rgba($bg-image-color, 0.25));
+      z-index: -1;
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    .text-secondary {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      transform: scaleX(-1);
+    }
+  }
+
+  &_items {
+    width: 72.5vw;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+
+  &_item {
+    position: relative;
+    border-bottom: 3px solid $secondary-color;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-image: linear-gradient(
+        25deg,
+        $secondary-color 40%,
+        rgba($secondary-color, 0.6)
+      );
+      opacity: 0.98;
+      @include transition-ease;
+    }
+    &:hover {
+      &::after {
+        top: 0;
+      }
+      .projects_btn {
+        opacity: 1;
+      }
+    }
+  }
+
+  &_btns {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+  }
+
+  &_btn {
+    opacity: 0;
+    color: set-text-color($secondary-color);
+    width: fit-content;
+    font-size: 1.2rem;
+    @include transition-ease;
+    &:hover {
+      cursor: pointer;
+      color: set-text-color(set-text-color($secondary-color));
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+    left: 5px;
+  }
+
+  footer {
+    transform: rotate(90deg) translate(-3rem, -4.25rem);
+  }
+}
+
+
+  
+// .projects_btn:hover .projects_items::after {
+//   background-image: linear-gradient(
+//     90deg,
+//     $secondary-color 30%,
+//     rgba($secondary-color, 0.5)
+//   );
+// }

@@ -1,7 +1,7 @@
-@import './config', './home', './menu', './about', './projects';
+@import './config', './home', './menu', './about', './projects', './contact';
 
 body {
-  width: 100vw;
+  // min-width: 100vw;
   height: 100vh;
   background-color: $bg-color;
   color: set-text-color($bg-color);
@@ -29,6 +29,9 @@ header {
   z-index: 2;
   width: 100%;
   padding: 0.75rem;
+  .active {
+    color: $secondary-color;
+  }
 }
 
 main {
