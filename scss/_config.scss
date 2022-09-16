@@ -23,7 +23,7 @@ $font-weights: (
   'extra-bold': 800,
   'black': 900,
 );
-$bg-image: '../images/bg-image.webp';
+$bg-image-mobile: '../images/bg-image-mobile.webp';
 $bg-image-desktop: '../images/bg-image-desktop.webp';
 
 @mixin transition-ease {
@@ -40,4 +40,20 @@ $bg-image-desktop: '../images/bg-image-desktop.webp';
 
 @function set-font-weight($weight-name) {
   @return map-get($map: $font-weights, $key: $weight-name);
+}
+
+@mixin media-md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin media-l {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin media-xl {
+  @media screen and (min-width: 1600px) {
+    @content;
+  }
 }

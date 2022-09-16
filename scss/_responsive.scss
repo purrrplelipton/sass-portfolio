@@ -1,0 +1,86 @@
+@include media-md {
+  .menu-btn {
+    visibility: hidden;
+  }
+
+  .nav {
+    visibility: visible;
+
+    .menu-nav {
+      display: block;
+      transform: translateY(0);
+      height: 100%;
+      background-color: transparent;
+      text-align: right;
+
+      &_item {
+        display: inline;
+        padding-right: 1.5rem;
+        margin-right: 1rem;
+      }
+      &_link {
+        font-size: 1.5rem;
+        width: fit-content;
+      }
+    }
+
+    span.attribution {
+      transform: rotate(90deg) translate(-8.3rem, 8.4rem);
+    }
+  }
+
+  .home {
+    background-image: url($bg-image-desktop);
+    background-position: left;
+  }
+
+  .about_bio {
+    font-size: 1.5rem;
+
+    &-image {
+      background-image: url($bg-image-desktop);
+    }
+  }
+
+  .projects {
+    &_bio-image {
+      background-image: url($bg-image-desktop);
+      height: 40vh;
+    }
+
+    &_items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .text-secondary {
+      font-size: 3rem;
+    }
+  }
+
+  .contact {
+    background-image: url($bg-image-desktop);
+    background-position: right top;
+
+    &_list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@include media-l {
+  .projects {
+    &_items {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .contact_list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@include media-xl {
+  .projects_bio-image {
+    height: 50vh;
+  }
+}

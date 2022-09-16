@@ -135,6 +135,7 @@
     position: fixed;
     bottom: 5px;
     left: 5px;
+    color: rgba($text-color, 0.5);
     
     @include transition-ease;
 
